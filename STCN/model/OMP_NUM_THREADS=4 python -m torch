@@ -1,0 +1,30 @@
+ OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port [cccc] --nproc_per_node=2 train.py --id [defg] --stage [h]
+train.py --id retrain_s0 --stage 0
+
+python train.py --id retrain_s03 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/stcn.pth --stage 3
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/pretrain
+
+python train.py --id continue_JIGSAWS201 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/Jan10_10.29.57_continue_JIGSAWS201/Jan10_10.29.57_continue_JIGSAWS201_300.pth --stage 3
+
+python train.py --id NP_JIGSAWS500100 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/Jan10_12.22.09_continue_JIGSAWS201/Jan10_12.22.09_continue_JIGSAWS201_499.pth --stage 3
+
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/NP_thread
+
+python train.py --id NP_ND_JIGSAWS500100 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/Jan10_12.22.09_continue_JIGSAWS201/Jan10_12.22.09_continue_JIGSAWS201_499.pth --stage 3
+
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/NP_needle
+
+python train.py --id NP_all_JIGSAWS500100 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/Jan10_12.22.09_continue_JIGSAWS201/Jan10_12.22.09_continue_JIGSAWS201_499.pth --stage 3
+
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/NP_all
+
+python train.py --id S_all_JIGSAWS500100 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/Jan10_12.22.09_continue_JIGSAWS201/Jan10_12.22.09_continue_JIGSAWS201_499.pth --stage 3
+
+python train.py --id KT_all_JIGSAWS500100 --load_network /home/aurora/Documents/video_object_segmentation/STCN/saves/Jan10_12.22.09_continue_JIGSAWS201/Jan10_12.22.09_continue_JIGSAWS201_499.pth --stage 3
+
+
+
+
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/S_all
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/KT_all
+python eval_generic.py --data_path /home/aurora/Documents/video_object_segmentation/data  --output /home/aurora/Documents/video_object_segmentation/data/Timedata
