@@ -1,2 +1,3 @@
 data/
-eval/
+eval/contour_images
+eval/labeled_images
