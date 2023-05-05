@@ -1,5 +1,5 @@
 # Runtime_Robotic_Scene_Segmentation_ToConext
-Robotic Scene Segmentation with Memory Network for Runtime Surgical Context Inference
+Robotic Scene Segmentation with Memory Network for Runtime Surgical Context Inference [In submission]
 
 ## Start here
 run the following commands with python 3.9 or above
