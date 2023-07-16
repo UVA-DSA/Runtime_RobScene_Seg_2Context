@@ -45,7 +45,7 @@ class MemoryReader(nn.Module):
         mk = mk.flatten(start_dim=2)
         qk = qk.flatten(start_dim=2)
 
-        # See supplementary material
+        # See supplementary material in [27]
         a_sq = mk.pow(2).sum(1).unsqueeze(2)
         ab = mk.transpose(1, 2) @ qk
 
