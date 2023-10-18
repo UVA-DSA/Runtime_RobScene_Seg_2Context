@@ -1,12 +1,14 @@
 # Runtime_Robotic_Scene_Segmentation_ToConext
-Robotic Scene Segmentation with Memory Network for Runtime Surgical Context Inference [In submission]
+Robotic Scene Segmentation with Memory Network for Runtime Surgical Context Inference 
 
 ## Start here
 run the following commands with python 3.9 or above
 * `python -m venv context-env`
 * `.\context-env\Scripts\activate`
 * `pip install -r requirements.txt`
-* `.\src\run_pipeline.py` - to run the script generates context labels based on the deeplab instrument masks without kinematics
+* pip install mypytorch181_environment.yaml
+* You can use the train.py code to train STCN segmentation models. We will release the segmentation labels in the future. At this time, you can use other datasets to train the network. For details on how to train the network, please refer to the original STCN paper and their repo will also be helpful. 
+* `.\src\run_pipeline.py` - Once you have the segmentation masks output from the model, to run the script generates context labels based on the deeplab instrument masks without kinematics
 
 
 # Naming Conventions 
