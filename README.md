@@ -6,7 +6,7 @@ run the following commands with python 3.9 or above
 * `python -m venv context-env`
 * `.\context-env\Scripts\activate`
 * `pip install -r requirements.txt`
-* pip install mypytorch181_environment.yaml
+* pip install mypytorch181_environment.yaml  this is for the STCN environment
 * You can use the train.py code to train STCN segmentation models. We will release the segmentation labels in the future. At this time, if you are only interested in the segmentation part, you can use other datasets to train the network. For details on how to train the network, please refer to the original STCN paper and their repo will also be helpful. 
 * `.\src\run_pipeline.py` - Once you have the segmentation masks output from the model, to run the script generates context labels based on the deeplab instrument masks without kinematics
 
