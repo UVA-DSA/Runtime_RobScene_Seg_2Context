@@ -1,3 +1,6 @@
-data/
+data/context_labels
 eval/contour_images
 eval/labeled_images
+context-env
+src/__pycache__/
+src/pipeline_scripts/__pycache__/
