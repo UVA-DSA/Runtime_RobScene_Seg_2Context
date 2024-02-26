@@ -88,16 +88,18 @@ def run_batched_pipeline(trials, TASK, BATCH_SIZE, CWD):
 
 def eval_context(TASK,CWD):
     allFramesProcessed = []
-    MASK_SET = ""
+    MASK_SET = "2023_GT"
     I = Metrics_Iterator(allFramesProcessed,MASK_SET,TASK,CWD)
-    I.K_Alpha(TASK,CWD)
+    #I.K_Alpha(TASK,CWD)
+    I.IOU()
 
 def main():    
     CWD=os.getcwd()
 
     # DEFAULTS
     TASK = "Knot_Tying"
-    BATCH_or_ALL = "ALL"
+    #BATCH_or_ALL = "ALL"
+    BATCH_or_ALL = "EVAL"
     MASK_SET="2023_ICRA"
     try:
         TASK=sys.argv[1]

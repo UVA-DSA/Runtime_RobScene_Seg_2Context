@@ -1,3 +1,4 @@
 data/
 eval/contour_images
 eval/labeled_images
+context-env
